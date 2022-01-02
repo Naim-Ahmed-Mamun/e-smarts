@@ -29,7 +29,6 @@ const Services = () => {
   return (
     <>
       <div className="services">
-        <h2>Naim supper dupper osssammmmm Developer</h2>
         <Container>
           <div className="section_title text-center mb-5">
             <h5>Guaranteed Success</h5>
