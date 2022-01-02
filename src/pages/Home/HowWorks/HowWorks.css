@@ -1,0 +1,20 @@
+.how_works_section{
+    margin-bottom: 100px;
+}
+.works_items_wrapper{
+    background: url(../../../img/how-works-bg.png);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: top;
+    position: relative;
+}
+.work_title{
+    font-size: 24px;
+    font-weight: 600;
+}
+.work_box p{
+    font-size: 17px;
+    line-height: 28px;
+    font-weight: 400;
+    color: var(--gray-color);
+}
