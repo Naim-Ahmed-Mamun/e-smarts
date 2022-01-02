@@ -1,21 +1,41 @@
 .our_difference{
     padding-bottom: 100px;
 }
-.nav-tabs .nav-link.active {
-    color: var(--primary-color) !important;
-    background-color: #fff;
-    border-color: transparent !important;
-}
-.nav-tabs .nav-link {
-    font-size: 28px;
-    font-weight: 600;
-    color: var(--text-gray);
-    padding: 0rem 0rem 0.5rem !important;
-}
-.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-    border: 1px solid transparent !important ;
-    isolation: isolate;
+.tabs_wrapper{
+    background: url(../../../img/tab-bg.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 90px;
 }
 .tab-content{
     padding-left: 150px;
+}
+.nav-tabs {
+    border-bottom: 1px solid transparent !important;
+}
+.nav-item{
+    border-bottom: 1px solid #ebebeb;
+    margin-bottom: 20px;
+}
+.nav-link {
+    display: block;
+    padding: .5rem 0rem !important;
+    color: var(--text-gray) !important; 
+    font-size: 24px;
+    font-weight: 500;
+}
+.nav-tabs .nav-link.active {
+    color: var(--primary-color) !important;
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+}
+.nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    border: 1px solid transparent !important;
+    isolation: inherit !important;
+}
+.icon{
+    color: var(--primary-color);
+    font-size: 20px;
+    font-weight: 600;
 }

@@ -1,10 +1,10 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
 import './HowWorks.css';
-import works_img_1 from '../../../img/how-works-1.webp';
-import works_img_2 from '../../../img/how-works-2.webp';
-import works_img_3 from '../../../img/how-works-3.webp';
-import works_img_4 from '../../../img/how-works-4.webp';
+import works_img_1 from '../../../img/how-works-1.png';
+import works_img_2 from '../../../img/how-works-2.png';
+import works_img_3 from '../../../img/how-works-3.png';
+import works_img_4 from '../../../img/how-works-4.png';
 
 const HowWorks = () => {
    const worksData = [
