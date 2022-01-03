@@ -1,11 +1,11 @@
 import React from 'react';
-import { Card, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import useCourses from '../../../hooks/useCourses';
 import './Courses.css';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from 'react-slick';
-import { AiOutlineUser,AiFillStar } from 'react-icons/ai';
+import SingleCourse from './SingleCourse/SingleCourse';
 
 const Courses = () => {
    const { courses } = useCourses();
@@ -58,23 +58,7 @@ const Courses = () => {
                </div>
 
                <Slider {...settings}>
-                  {courses.map(course => {
-                     return (
-                        <Card className='course_box'>
-                           <Card.Img style={{height:'300px'}} variant="top" src={course?.img} />
-                           <Card.Body>
-                              <Card.Title className='text-capitalize title mb-2'>{course?.type}</Card.Title>
-                              <Card.Text className='trainer'> {course?.trainer}</Card.Text>
-                              <Card.Text className='description border-bottom'> {course?.description.slice(0,70)} <span style={{color:'red'}}>...continue</span></Card.Text>
-                              <ul className='p-0 d-flex align-items-center course_bottom_item'>
-                                 <li className='me-2 student'><AiOutlineUser className='me-2' />{course?.student} Students</li>
-                                 <li><AiFillStar className='me-2 rating'/>{course?.rating} Ratings</li>
-                                 <li className='price rounded text-white'>${course?.price}</li>
-                              </ul>
-                           </Card.Body>
-                        </Card>
-                     )
-                  })}
+                  {courses.map(course => <SingleCourse key={course?._id} course={course}></SingleCourse>)}
                </Slider>
 
             </Container>

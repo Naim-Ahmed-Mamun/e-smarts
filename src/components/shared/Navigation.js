@@ -2,12 +2,15 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { BsFacebook, BsTwitter } from 'react-icons/bs';
 import { FaInstagramSquare } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 import logo from '../../img/logo.webp';
 import './Navigation.css';
 
 
 const Navigation = () => {
+   const {user,logout} = useAuth();
+   // console.log(user.email);
    return (
       <>
          <div className="top_bar border-bottom">
@@ -22,8 +25,12 @@ const Navigation = () => {
                      <span className='d-inline-block'><FaInstagramSquare className='icon' /></span>
                   </div>
                   <div className="top_bar_right_side pb-2">
-                     <button className="primary-btn mx-3">Login</button>
-                     <button className="primary-btn">Register</button>
+                     {
+                        user?.email ?<button onClick={logout} className="primary-btn mx-3">Logout</button> 
+                        : <Link to="/login"><button className="primary-btn mx-3">Login</button></Link> 
+                     }
+                     {/* <Link to="/login"><button className="primary-btn mx-3">Login</button></Link> */}
+                    {!user?.email && <Link to="/register"><button className="primary-btn">Register</button></Link>}
                   </div>
                </div>
             </Container>
@@ -36,7 +43,7 @@ const Navigation = () => {
                <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="ms-auto">
                      <NavLink className="nav_link" to="/">Home</NavLink>
-                     <NavLink className="nav_link" to="/">Courses</NavLink>
+                     <NavLink className="nav_link" to="/allCourses">Courses</NavLink>
                      <NavLink className="nav_link" to="/">Instructors</NavLink>
                      <NavLink className="nav_link" to="/blogs">Blogs</NavLink>
                      <NavLink className="nav_link" to="/">Contact</NavLink>
