@@ -1,0 +1,12 @@
+.all_courses_header{
+    padding: 100px 0;
+    background: url(../../../img/courses-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.all_courses_title{
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
