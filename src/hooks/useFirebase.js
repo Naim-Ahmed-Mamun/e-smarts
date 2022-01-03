@@ -58,7 +58,7 @@ const useFirebase = () => {
             setLoading(false);
             const redirect_uri = location?.state?.from || '/';
             Swal.fire({
-                type: 'success',
+                icon: 'success',
                 title: 'Login Successfully',
             })
             navigate(redirect_uri)
@@ -67,7 +67,7 @@ const useFirebase = () => {
             setAuthError(err.message)
             console.log(err.message);
             Swal.fire({
-                type: 'error',
+                icon: 'error',
                 title: authError,
             })
         })

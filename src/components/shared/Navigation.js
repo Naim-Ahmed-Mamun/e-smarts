@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { BsFacebook, BsTwitter } from 'react-icons/bs';
 import { FaInstagramSquare } from 'react-icons/fa';
+import { BiMenu } from 'react-icons/bi';
 import { Link, NavLink } from 'react-router-dom';
 import useAuth from '../../hooks/useAuth';
 import logo from '../../img/logo.webp';
 import './Navigation.css';
+import SideBar from '../SideBar/SideBar';
 
 
 const Navigation = () => {
    const {user,logout} = useAuth();
    // console.log(user.email);
+   const [show, setShow] = useState(false);
+
+   const handleClose = () => setShow(false);
+   const handleShow = () => setShow(true);
    return (
       <>
          <div className="top_bar border-bottom">
@@ -47,11 +53,13 @@ const Navigation = () => {
                      <NavLink className="nav_link" to="/">Instructors</NavLink>
                      <NavLink className="nav_link" to="/blogs">Blogs</NavLink>
                      <NavLink className="nav_link" to="/">Contact</NavLink>
+                     <span onClick={handleShow}><BiMenu className="menuBar"/></span>
                   </Nav>
                </Navbar.Collapse>
             </Container>
          </Navbar>
 
+         <SideBar show={show} handleClose={handleClose}></SideBar>
       </>
    );
 };

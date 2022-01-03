@@ -8,6 +8,8 @@ import ContextProvider from './context/ContextProvider';
 import AllCourses from './pages/AllCourses/AllCourses/AllCourses';
 
 import Home from './pages/Home/Home/Home';
+import Review from './components/Review/Review';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -17,12 +19,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
 
-            <Route path="/blogs" element={<Blogs></Blogs>}></Route>
             <Route path="/home" element={<Home></Home>}></Route>
+            <Route path="/blogs" element={<Blogs></Blogs>}></Route>
             <Route path="/allCourses" element={<AllCourses></AllCourses>}></Route>
-            <Route path="/courses/:name" element={<SingleCourseDetails></SingleCourseDetails>}></Route>
+            <Route path="/courses/:id" element={<PrivateRoute>
+              <SingleCourseDetails></SingleCourseDetails>
+            </PrivateRoute>}></Route>
             <Route path="/login" element={<Login></Login>}></Route>
             <Route path="/register" element={<Register></Register>}></Route>
+            <Route path="/review" element={<Review></Review>}></Route>
         </Routes>
         </BrowserRouter>
      

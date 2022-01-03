@@ -17,3 +17,7 @@
 .nav_link:last-child{
     margin-right: 0px;
 }
+.menuBar{
+    cursor: pointer;
+    font-size: 24px;
+}

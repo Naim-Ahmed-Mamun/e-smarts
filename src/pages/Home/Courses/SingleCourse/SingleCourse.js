@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const SingleCourse = ({ course }) => {
    return (
       <>
-         <Link to={`/courses/${course?.type}`}>
+         <Link to={`/courses/${course?._id}`}>
             <Card className='course_box'>
                <Card.Img style={{ height: '300px' }} variant="top" src={course?.img} />
                <Card.Body>

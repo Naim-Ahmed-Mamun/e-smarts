@@ -1,0 +1,24 @@
+.single_course{
+    padding-bottom: 100px;
+}
+.single_course_type{
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-gray);
+}
+.single_price{
+    font-size: 16px;
+    color: var(--white-color);
+    background-color: orange;
+    padding: 2px 8px;
+}
+.course_title{
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--text-gray);
+}
+.course_description{
+    font-size: 17px;
+    color: var(--gray-color);
+    line-height: 28px;
+}

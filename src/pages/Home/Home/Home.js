@@ -8,6 +8,7 @@ import Services from '../Services/Services';
 import OurDifference from '../OurDifference/OurDifference';
 import Footer from '../Footer/Footer';
 import Courses from '../Courses/Courses';
+import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
    return (
@@ -18,6 +19,7 @@ const Home = () => {
          <Courses/>
          <OurDifference/>
          <HowWorks/>
+         <Testimonials/>
          <PricingBox></PricingBox>
          <AllLogo></AllLogo>
          <Footer></Footer>
