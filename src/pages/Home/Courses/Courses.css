@@ -1,0 +1,45 @@
+.courses{
+    padding: 100px 0;
+    background: url(../../../img/courses-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.slick-slide{
+    padding: 0 15px;
+}
+.course_box {
+    cursor: pointer;
+}
+.course_box .title{
+    color: var(--text-gray);
+    font-size: 24px;
+    font-weight: 500;
+}
+.course_box .trainer{
+    color: var(--gray-color);
+    font-size: 16px;
+    font-weight: 400;
+}
+.course_box .description{
+    color: var(--gray-color);
+    font-size: 16px;
+    font-weight: 400;
+    padding: 0px 0 20px;
+}
+.course_box .rating{
+    color: orange;
+}
+.course_box .price{
+    background: #FF9900;
+    font-size: 16px;
+    padding: 2px 8px;
+}
+.course_bottom_item{
+    position: relative;
+}
+.course_bottom_item .price{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
