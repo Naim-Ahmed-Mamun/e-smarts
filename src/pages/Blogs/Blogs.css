@@ -5,4 +5,41 @@
 .bolgHeadLine h1{
     font-size: 50px;
     color: #FFFFFF;
+    font-weight: bold;
+}
+.blogs{
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+.blogs .blogBox{
+    width: 70%;
+    padding: 20px 0px;
+}
+
+.blogs .blogBox .blog-content h1{
+    font-size: 50px;
+    font-weight: bold;
+    padding-top: 40px;
+    transition: all 0.2s ease-in-out;
+}
+.blogs .blogBox .blog-content h1:hover{
+    color: #4CDED7;
+}
+.blogs .blog-content .blog-reaction{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.blogs .blog-content .blog-reaction p{
+    color: rgba(0, 0, 0, 0.212);
+    transition: all 0.2s ease-in-out;
+}
+.blogs .blog-content .blog-reaction p:hover{
+    color: rgba(0, 0, 255, 0.603);
+}
+.blogs .blog-content p{
+    color: gray;
+    font-size: 18px;
+    font-weight: 500;
 }
