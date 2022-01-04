@@ -13,8 +13,8 @@ const Footer = () => {
                         <p>Academic English</p>
                         <p>Jacke Masito</p>
                         <p>Judith Stevens</p>
-                        <p className='footerIcon'><i class="fas fa-phone-alt"></i> +88 01309888888</p>
-                        <p className='footerIcon'><i class="fas fa-clock"></i> Fri-8.00-18.00</p>
+                        <p className='footerIcon'><i className="fas fa-phone-alt"></i> +88 01309888888</p>
+                        <p className='footerIcon'><i className="fas fa-clock"></i> Fri-8.00-18.00</p>
                     </div>
                     <div className='col-lg-3 col-md-6 col-sm-12 content'>
                         <h3>Popular Courses</h3>

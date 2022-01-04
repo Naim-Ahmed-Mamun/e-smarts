@@ -8,6 +8,7 @@ import Services from '../Services/Services';
 import OurDifference from '../OurDifference/OurDifference';
 import Footer from '../Footer/Footer';
 import Courses from '../Courses/Courses';
+import MakeAnAdmin from '../../../components/MakeAnAdmin/MakeAnAdmin';
 
 const Home = () => {
    return (
@@ -19,6 +20,7 @@ const Home = () => {
          <OurDifference/>
          <HowWorks/>
          <PricingBox></PricingBox>
+         <MakeAnAdmin></MakeAnAdmin>
          <AllLogo></AllLogo>
          <Footer></Footer>
       </>
