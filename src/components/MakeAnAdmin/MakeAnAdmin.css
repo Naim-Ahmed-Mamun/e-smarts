@@ -1,3 +1,6 @@
+.MakeAdminContainer{
+    background: rgba(245, 245, 245, 0.795);
+}
 .MakeAdminTitle{
     background-image: url("https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/title-area-background.png");
     background-repeat: no-repeat;
@@ -19,6 +22,7 @@
 .MakeAdminForm{
    display: flex;
    justify-content: center;
+   padding: 40px 0px;
 }
 .MakeAdminForm i{
     font-size: 30px;

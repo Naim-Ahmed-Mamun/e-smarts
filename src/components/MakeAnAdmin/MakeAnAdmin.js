@@ -14,7 +14,7 @@ const MakeAnAdmin = () => {
 
     }
     return (
-        <div>
+        <div className='MakeAdminContainer'>
             <div className='MakeAdminTitle'>
                 <Container>
                     <h1>Make An Admin</h1>
@@ -25,7 +25,7 @@ const MakeAnAdmin = () => {
                 <div className='MakeAdminForm'>
                     <form onClick={handleAdmin}>
                         <div><i className="fas fa-user"></i> <span>Admin</span></div>
-                        <input type="email" placeholder="abc@gmail.com" onBlur={collectEmail}/>
+                        <input type="email" placeholder="abc@gmail.com" onBlur={collectEmail} required/>
                         <button type='submit' className='adminBtn'>Submit</button>
                     </form>
                 </div>
