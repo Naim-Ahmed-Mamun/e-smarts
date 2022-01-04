@@ -70,7 +70,7 @@ const Instructor = () => {
 
                             <div className='w-75 text-center mx-auto'>
                                 
-                                <h6 className='text-info fs-5'>What's New</h6> 
+                                <h6 className='text-info fs-5'> What's New !</h6> 
                                 <h1 className='text-uppercase'>The Best Tutors in Town</h1>
                                 <p className='fs-6 text-secondary'>Proin ac lobortis arcu, a vestibulum augue. Vivamus ipsum neque, facilisis vel mollis vitae, mollis nec ante. Quisque aliquam dictum condim.</p>
                             </div>
