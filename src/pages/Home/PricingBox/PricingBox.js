@@ -7,7 +7,7 @@ const PricingBox = () => {
         <div className="pricing-container">
             <Container>
                 <div>
-                    <div>
+                    <div data-aos="fade-up">
                         <div className="section_title text-center mb-5">
                             <h5>Advising Success</h5>
                             <h2>Pricing Plans</h2>
@@ -17,7 +17,7 @@ const PricingBox = () => {
                         </div>
                     </div>
                     <div className="pricing-boxes">
-                        <div className="pricing-box border">
+                        <div className="pricing-box border" data-aos="fade-up">
                             <div className="pricingBox-partOne">
                                 <div className="starts">
                                     <i className="fas fa-star"></i>
@@ -34,7 +34,7 @@ const PricingBox = () => {
                                 <button className="purchaseBtn" id="purchaseBtnOne">PARCHASE</button>
                             </div>
                         </div>
-                        <div className="pricing-box border">
+                        <div className="pricing-box border" data-aos="fade-up">
                             <div className="pricingBox-partOne">
                                 <div className="starts">
                                     <i className="fas fa-star"></i>
@@ -53,7 +53,7 @@ const PricingBox = () => {
                                 <button className="purchaseBtn" id="purchaseBtnTwo">PARCHASE</button>
                             </div>
                         </div>
-                        <div className="pricing-box border">
+                        <div className="pricing-box border" data-aos="fade-up">
                             <div className="pricingBox-partOne">
                                 <div className="starts">
                                     <i className="fas fa-star"></i>

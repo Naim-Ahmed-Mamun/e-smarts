@@ -41,8 +41,8 @@ const Blogs = () => {
                                         <h1>{blog.title}</h1>
                                         <div className='blog-reaction'>
                                             <p>{blog.date}</p>
-                                            <p><i class="far fa-heart"></i> 20</p>
-                                            <p><i class="fas fa-comment"></i> 5</p>
+                                            <p><i className="far fa-heart"></i> 20</p>
+                                            <p><i className="fas fa-comment"></i> 5</p>
                                             <p>Education</p>
                                         </div>
                                         <p>{blog.description}</p>

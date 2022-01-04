@@ -7,7 +7,7 @@ const SingleCourse = ({ course }) => {
    return (
       <>
          <Link to={`/courses/${course?._id}`}>
-            <Card className='course_box'>
+            <Card className='course_box' data-aos="fade-up">
                <Card.Img style={{ height: '300px' }} variant="top" src={course?.img} />
                <Card.Body>
                   <Card.Title className='text-capitalize title mb-2'>{course?.type}</Card.Title>

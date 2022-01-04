@@ -58,7 +58,7 @@ const Testimonials = () => {
                <Slider {...settings}>
                   {testimonials.map(testimonial => {
                      return (
-                        <div key={testimonial._id}>
+                        <div key={testimonial._id} data-aos="fade-up">
                            <div className="p-3 testimonial_item text-white text-center">
                               <p className='review mb-3'>{testimonial?.review}</p>
                               <h3 className='mb-3'>{testimonial?.name}</h3>

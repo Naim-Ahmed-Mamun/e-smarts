@@ -7,7 +7,7 @@ const OurDifference = () => {
    return (
       <>
          <div className="our_difference">
-            <Container className='d-flex tabs_wrapper'>
+            <Container className='d-flex tabs_wrapper' data-aos="fade-up">
                <Tabs defaultActiveKey="What we do" id="uncontrolled-tab-example" className="mb-3 flex-column">
                   <Tab eventKey="What we do" title="What we do">
 
@@ -23,6 +23,7 @@ const OurDifference = () => {
                         <li className='mb-3'><span className='me-3'><AiOutlineCheck className='icon' /></span>Lorem ipscras maximus turpis eget erat</li>
                         <li className='mb-3'><span className='me-3'><AiOutlineCheck className='icon' /></span>Vestibulum vitae libero neque</li>
                      </ul>
+
                   </Tab>
 
                   <Tab eventKey="Education Centre" title="Education Centre">

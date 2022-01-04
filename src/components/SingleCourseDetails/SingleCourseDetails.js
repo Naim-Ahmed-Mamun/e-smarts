@@ -21,25 +21,25 @@ const SingleCourseDetails = () => {
          <Navigation />
          <div className='mt-5 single_course'>
             <div className="all_courses_header d-flex align-items-center">
-               <Container>
+               <Container data-aos="fade-up">
                   <h2 className='all_courses_title text-white text-capitalize'>{singleCourse?.type}</h2>
                </Container>
             </div>
             <Container className='mt-5'>
                <div className="single_item">
-                  <div className="single_item_header d-flex justify-content-between">
+                  <div className="single_item_header d-flex justify-content-between" data-aos="fade-up">
                      <h2 className='text-capitalize single_course_type'>{singleCourse?.type}
                      <span className='single_price rounded ms-5'>$ {singleCourse?.price}</span> </h2>
                      <Link to="/cart"><button className='primary-btn'>Buy Course</button></Link>
                   </div>
 
-                  <div className="course_img my-5">
+                  <div className="course_img my-5" data-aos="fade-up">
                      <img src={singleCourse?.img} alt="" />
                   </div>
 
-                  <h2 className='course_title'>About this course</h2>
+                  <h2 className='course_title' data-aos="fade-up">About this course</h2>
 
-                  <p className='course_description'>{singleCourse?.description}</p>
+                  <p className='course_description' data-aos="fade-up">{singleCourse?.description}</p>
                </div>
             </Container>
          </div>

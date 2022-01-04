@@ -37,12 +37,12 @@ const HowWorks = () => {
       <>
          <div className="how_works_section">
             <Container>
-               <div className="section_title text-center mb-5">
+               <div className="section_title text-center mb-5" data-aos="fade-up">
                   <h5>Research & Pedagogy</h5>
                   <h2>How It Works?</h2>
                   <p>Proin ac lobortis arcu, a vestibulum augue. Vivamus ipsum neque, facilisis vel mollis vitae, mollis nec ante. Quisque aliquam dictum condim.</p>
                </div>
-               <div className="row works_items_wrapper mt-5">
+               <div className="row works_items_wrapper mt-5" data-aos="fade-up">
                  {
                     worksData.map(work => <div key={work.id} className="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div className="work_box text-center">

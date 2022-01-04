@@ -48,7 +48,7 @@ const Courses = () => {
       <>
          <div className="courses">
             <Container>
-               <div className="section_title text-center mb-5">
+               <div className="section_title text-center mb-5" data-aos="fade-up">
                   <h2 className='text-white'>Popular Online Courses</h2>
                   <p className='text-white'>
                      Proin ac lobortis arcu, a vestibulum augue. Vivamus ipsum neque,

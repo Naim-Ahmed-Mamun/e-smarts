@@ -30,7 +30,7 @@ const Services = () => {
     <>
       <div className="services">
         <Container>
-          <div className="section_title text-center mb-5">
+          <div className="section_title text-center mb-5" data-aos="fade-up">
             <h5>Guaranteed Success</h5>
             <h2>Our Services</h2>
             <p>
@@ -40,7 +40,7 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="row">
+          <div className="row" data-aos="fade-up">
             {servicesData.map((service) => (
               <div
                 key={service.id}
