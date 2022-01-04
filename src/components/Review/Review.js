@@ -7,7 +7,7 @@ import Navigation from '../shared/Navigation';
 import Footer from '../../pages/Home/Footer/Footer';
 
 const Review = () => {
-    const { user } = useAuth();
+   const { user } = useAuth();
    const { register, handleSubmit, reset } = useForm();
    // const [rating,setRating] = useState('');
    const [ratings, setRatings] = useState(0);
@@ -19,7 +19,7 @@ const Review = () => {
       // other logic
       console.log(rate)
    }
-   
+
    // submit form
    const onSubmit = data => {
       data.name = user?.displayName;
@@ -63,7 +63,6 @@ const Review = () => {
 
    return (
       <>
-      <Navigation></Navigation>
          <div>
             <h3 className="text-center my-5 text-danger" data-aos="fade-up">Review Your Order</h3>
             <div className="review_form my-5">

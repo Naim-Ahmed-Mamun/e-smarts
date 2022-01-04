@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Blogs from './pages/Blogs/Blogs';
 import Login from './components/shared/Login/Login/Login';
 import Register from './components/shared/Register/Register';
@@ -12,9 +14,8 @@ import Review from './components/Review/Review';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import Navigation from './components/shared/Navigation';
 import MyCart from './components/MyCart/MyCart';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
     <>
       <ContextProvider>
         <BrowserRouter>
+          <Navigation />
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
 
@@ -41,9 +43,9 @@ function App() {
             <Route path="/cart" element={<Cart></Cart>}></Route>
             <Route path="/checkout" element={<Checkout></Checkout>}></Route>
             <Route path="/myOrder" element={<MyCart></MyCart>}></Route>
-        </Routes>
+          </Routes>
         </BrowserRouter>
-     
+
       </ContextProvider>
 
     </>

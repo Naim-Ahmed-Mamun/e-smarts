@@ -21,7 +21,6 @@ const Blogs = () => {
     return (
         <>
 
-        <Navigation/>
 
             <div className='blogContainer'>
                 <div className='bolgHeadLine'>

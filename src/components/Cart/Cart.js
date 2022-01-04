@@ -2,14 +2,13 @@ import React, { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { GetContext } from '../../context/ContextProvider';
-import Navigation from '../shared/Navigation';
+// import Navigation from '../shared/Navigation';
 import './Cart.css';
 
 const Cart = () => {
    const { singleCourse } = useContext(GetContext);
    return (
       <>
-         <Navigation />
 
          <div className="cart_items">
             <div className="d-flex align-items-center">

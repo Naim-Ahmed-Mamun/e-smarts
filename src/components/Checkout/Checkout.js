@@ -4,15 +4,14 @@ import { useForm } from 'react-hook-form';
 import { GetContext } from '../../context/ContextProvider';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../../pages/Home/Footer/Footer';
-import Navigation from '../shared/Navigation';
 import Swal from 'sweetalert2';
 import './Checkout.css';
 import { useNavigate } from 'react-router-dom';
 
 const Checkout = () => {
    const { singleCourse } = useContext(GetContext);
-   const {user} = useAuth();
-   const { register, handleSubmit,reset } = useForm();
+   const { user } = useAuth();
+   const { register, handleSubmit, reset } = useForm();
    const navigate = useNavigate();
 
    // submit form
@@ -41,7 +40,6 @@ const Checkout = () => {
    };
    return (
       <>
-         <Navigation></Navigation>
          <div className="checkout">
             <div className="cart_items">
                <div className="d-flex align-items-center">

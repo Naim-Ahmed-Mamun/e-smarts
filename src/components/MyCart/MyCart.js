@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Container, Table } from 'react-bootstrap';
 import useAuth from '../../hooks/useAuth';
 import Footer from '../../pages/Home/Footer/Footer';
-import Navigation from '../shared/Navigation';
 import { FaTrash } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 
@@ -52,9 +51,6 @@ const MyCart = () => {
     }
     return (
         <>
-
-        <Navigation/>
-
             <div className="my_cart">
 
                 <div className="cart_items">

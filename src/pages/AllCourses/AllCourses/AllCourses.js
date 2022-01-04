@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import Navigation from '../../../components/shared/Navigation';
 import useCourses from '../../../hooks/useCourses';
 import './AllCourses.css';
 import { AiOutlineUser, AiFillStar } from 'react-icons/ai';
@@ -11,7 +10,6 @@ const AllCourses = () => {
    const { courses } = useCourses();
    return (
       <>
-         <Navigation></Navigation>
          <div className="all_courses">
             <div className="all_courses_header d-flex align-items-center">
                <Container>
@@ -27,7 +25,7 @@ const AllCourses = () => {
                      <Card className='course_box mb-4'>
                         <Card.Img style={{ height: '300px' }} variant="top" src={course?.img} />
                         <Card.Body>
-                           <Card.Title className='text-capitalize title mb-2'>{course?.type}</Card.Title>
+                           <Card.Title className='text-capitalize title mb-2'>{course?.name}</Card.Title>
                            <Card.Text className='trainer'> {course?.trainer}</Card.Text>
                            <Card.Text className='description border-bottom'> {course?.description.slice(0, 70)} <span style={{ color: 'red' }}>...continue</span></Card.Text>
                            <ul className='p-0 d-flex align-items-center course_bottom_item'>
