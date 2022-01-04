@@ -9,8 +9,8 @@ import Swal from 'sweetalert2';
 
 const Checkout = () => {
    const { singleCourse } = useContext(GetContext);
-   const {user} = useAuth();
-   const { register, handleSubmit,reset } = useForm();
+   const { user } = useAuth();
+   const { register, handleSubmit, reset } = useForm();
 
    // submit form
    const onSubmit = data => {
@@ -37,7 +37,6 @@ const Checkout = () => {
    };
    return (
       <>
-         <Navigation></Navigation>
          <div className="checkout">
             <div className="cart_items">
                <div className="d-flex align-items-center">

@@ -1,6 +1,5 @@
 import React from 'react';
 import PricingBox from '../PricingBox/PricingBox';
-import Navigation from '../../../components/shared/Navigation';
 import AllLogo from '../AllLogo/AllLogo';
 import HeroSection from '../HeroSection/HeroSection';
 import HowWorks from '../HowWorks/HowWorks';
@@ -13,13 +12,12 @@ import Testimonials from '../Testimonials/Testimonials';
 const Home = () => {
    return (
       <>
-         <Navigation/>
-         <HeroSection/>
-         <Services/>
-         <Courses/>
-         <OurDifference/>
-         <HowWorks/>
-         <Testimonials/>
+         <HeroSection />
+         <Services />
+         <Courses />
+         <OurDifference />
+         <HowWorks />
+         <Testimonials />
          <PricingBox></PricingBox>
          <AllLogo></AllLogo>
          <Footer></Footer>

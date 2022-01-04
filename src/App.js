@@ -12,12 +12,14 @@ import Review from './components/Review/Review';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import Navigation from './components/shared/Navigation';
 
 function App() {
   return (
     <>
       <ContextProvider>
         <BrowserRouter>
+          <Navigation />
           <Routes>
             <Route path="/" element={<Home></Home>}></Route>
 
@@ -32,9 +34,9 @@ function App() {
             <Route path="/review" element={<Review></Review>}></Route>
             <Route path="/cart" element={<Cart></Cart>}></Route>
             <Route path="/checkout" element={<Checkout></Checkout>}></Route>
-        </Routes>
+          </Routes>
         </BrowserRouter>
-     
+
       </ContextProvider>
 
     </>

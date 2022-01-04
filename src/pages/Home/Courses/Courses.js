@@ -9,6 +9,7 @@ import SingleCourse from './SingleCourse/SingleCourse';
 
 const Courses = () => {
    const { courses } = useCourses();
+   const fewCourses = courses.slice(0, 5);
 
    const settings = {
       dots: true,
@@ -58,7 +59,7 @@ const Courses = () => {
                </div>
 
                <Slider {...settings}>
-                  {courses.map(course => <SingleCourse key={course?._id} course={course}></SingleCourse>)}
+                  {fewCourses.map(course => <SingleCourse key={course?._id} course={course}></SingleCourse>)}
                </Slider>
 
             </Container>

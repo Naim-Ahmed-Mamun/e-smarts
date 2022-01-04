@@ -3,25 +3,24 @@ import loginImg from '../../../img/register-img.svg';
 import { useForm } from "react-hook-form";
 import './Register.css';
 import Navigation from '../Navigation';
-import { Link,useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Register = () => {
    // use form
-   const { register, handleSubmit, reset} = useForm();
+   const { register, handleSubmit, reset } = useForm();
    // auth
-   const {registerUser} = useAuth();
+   const { registerUser } = useAuth();
    // history
    const navigate = useNavigate()
    // submit form
    const onSubmit = data => {
-      registerUser(data.email,data.password,data.name,reset,navigate)
+      registerUser(data.email, data.password, data.name, reset, navigate)
       console.log(data)
    };
 
    return (
       <>
-      <Navigation></Navigation>
          <div className="login">
             <div className="container">
                <div className="row align-items-center">

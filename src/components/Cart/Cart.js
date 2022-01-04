@@ -9,7 +9,6 @@ const Cart = () => {
    const { singleCourse } = useContext(GetContext);
    return (
       <>
-         <Navigation />
 
          <div className="cart_items">
             <div className="d-flex align-items-center">

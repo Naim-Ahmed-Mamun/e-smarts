@@ -2,7 +2,7 @@ import React from 'react';
 import loginImg from '../../../../img/login-img.svg';
 import { useForm } from "react-hook-form";
 import './Login.css';
-import { Link,useLocation,useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import useAuth from '../../../../hooks/useAuth';
 import Navigation from '../../Navigation';
 
@@ -10,7 +10,7 @@ const Login = () => {
    // use form
    const { register, handleSubmit, } = useForm();
    // auth
-   const {loginUser} = useAuth()
+   const { loginUser } = useAuth()
    // location
    const location = useLocation()
    // history
@@ -18,12 +18,11 @@ const Login = () => {
    // submit
    const onSubmit = data => {
       // console.log(data)
-      loginUser(data.email,data.password,location,navigate)
+      loginUser(data.email, data.password, location, navigate)
    };
 
    return (
       <>
-      <Navigation></Navigation>
          <div className="login">
             <div className="container">
                <div className="row align-items-center">
@@ -34,7 +33,7 @@ const Login = () => {
                   </div>
                   <div className="col-lg-6" data-aos="fade-up">
                      <div className="form_container">
-                     <h2 className="text-center mb-4">Login</h2>
+                        <h2 className="text-center mb-4">Login</h2>
                         <form onSubmit={handleSubmit(onSubmit)}>
                            <input type="email" {...register("email")} placeholder="Email" />
                            <input type="password" {...register("password")} placeholder="Password" />
