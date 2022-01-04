@@ -53,7 +53,7 @@ const ManageAllOrder = () => {
                         <div className='col-lg-2 col-md-4 col-sm-6'>{order.course.type}</div>
                         <div className='col-lg-2 col-md-4 col-sm-6'>${order.price}</div>
                         <div className='col-lg-2 col-md-4 col-sm-6'><button>Pay</button></div>
-                        <div className='col-lg-2 col-md-4 col-sm-6'><button onClick={() => handleDelete(order.course._id)}><i className="fas fa-trash"></i></button></div>
+                        <div className='col-lg-2 col-md-4 col-sm-6'><button onClick={() => handleDelete(order._id)}><i className="fas fa-trash"></i></button></div>
                     </div>)}
                 </div>
             </Container>

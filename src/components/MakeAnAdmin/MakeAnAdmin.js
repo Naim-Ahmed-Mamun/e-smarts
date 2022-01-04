@@ -5,12 +5,21 @@ import './MakeAnAdmin.css';
 
 const MakeAnAdmin = () => {
     const [adminEmail, setAdminEmail] = useState('')
+    const adminEmailData = {email: adminEmail}
     const collectEmail = event => {
         setAdminEmail(event.target.value)
     }
     const handleAdmin = event => {
         event.preventDefault()
-        console.log(adminEmail)
+        // console.log(adminEmail)
+        const url = `https://limitless-shelf-68611.herokuapp.com/users/admin`
+        fetch(url, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(adminEmailData)
+        })
 
     }
     return (

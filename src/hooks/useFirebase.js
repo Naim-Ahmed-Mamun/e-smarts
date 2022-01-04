@@ -9,7 +9,7 @@ initializeFirebaseAuthentication()
 const useFirebase = () => {
     const [user,setUser] = useState({});
     const [authError,setAuthError] = useState('');
-    // const [admin,setAdmin] = useState(false);
+    const [admin, setAdmin] = useState(false)
     const [loading,setLoading] = useState(true);
 
     // auth
@@ -97,17 +97,16 @@ const useFirebase = () => {
           });
     };
 
-    // admin check
-    // useEffect(() => {
-    //     setLoading(true)
-    //     fetch(`https://vast-shelf-14740.herokuapp.com/admin/${user?.email}`)
-    //     .then(res => res.json())
-    //     .then(data => {
-    //         console.log(data.admin);
-    //         setAdmin(data.admin)
-    //         setLoading(false)
-    //     })
-    // },[user?.email])
+    // check admin from user collection
+    useEffect(() => {
+        const url = `https://limitless-shelf-68611.herokuapp.com/users/${user?.email}`
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+                setAdmin(data.head)
+            })
+    }, [user?.email])
 
     // saved user info
     const savedUser = (name,email) => {
@@ -132,6 +131,7 @@ const useFirebase = () => {
         logout,
         authError,
         loading,
+        admin
     }
 }
 
