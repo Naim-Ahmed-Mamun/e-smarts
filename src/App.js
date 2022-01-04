@@ -10,6 +10,8 @@ import AllCourses from './pages/AllCourses/AllCourses/AllCourses';
 import Home from './pages/Home/Home/Home';
 import Review from './components/Review/Review';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
             <Route path="/login" element={<Login></Login>}></Route>
             <Route path="/register" element={<Register></Register>}></Route>
             <Route path="/review" element={<Review></Review>}></Route>
+            <Route path="/cart" element={<Cart></Cart>}></Route>
+            <Route path="/checkout" element={<Checkout></Checkout>}></Route>
         </Routes>
         </BrowserRouter>
      

@@ -1,0 +1,19 @@
+.cart_items{
+    padding: 100px 0;
+    background: url(../../img/courses-bg.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}
+.proceed_item{
+    position: relative;
+}
+.course_type,.course_price{
+    font-size: 24px;
+    color: var(--text-gray);
+}
+.proceed_btn{
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}

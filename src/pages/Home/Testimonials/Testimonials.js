@@ -59,7 +59,7 @@ const Testimonials = () => {
                   {testimonials.map(testimonial => {
                      return (
                         <div key={testimonial._id}>
-                           <div className="p-3 shadow testimonial_item text-white text-center">
+                           <div className="p-3 testimonial_item text-white text-center">
                               <p className='review mb-3'>{testimonial?.review}</p>
                               <h3 className='mb-3'>{testimonial?.name}</h3>
                               <Rating readonly size={30} ratingValue={testimonial?.ratings} />

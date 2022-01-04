@@ -1,6 +1,7 @@
 import React from 'react';
 import { Offcanvas } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import logo from '../../img/logo.webp';
 
 const SideBar = ({show,handleClose}) => {
   
@@ -8,7 +9,7 @@ const SideBar = ({show,handleClose}) => {
       <>
          <Offcanvas show={show} onHide={handleClose}>
             <Offcanvas.Header closeButton>
-               <Offcanvas.Title>Offcanvas</Offcanvas.Title>
+               <img style={{width:'200px', height:'80px'}} src={logo} alt="" />
             </Offcanvas.Header>
             <Offcanvas.Body>
                <Link to="/review">Review</Link>

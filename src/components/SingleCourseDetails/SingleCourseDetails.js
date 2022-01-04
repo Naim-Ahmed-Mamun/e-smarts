@@ -30,7 +30,7 @@ const SingleCourseDetails = () => {
                   <div className="single_item_header d-flex justify-content-between">
                      <h2 className='text-capitalize single_course_type'>{singleCourse?.type}
                      <span className='single_price rounded ms-5'>$ {singleCourse?.price}</span> </h2>
-                     <Link to="/"><button className='primary-btn'>Buy Course</button></Link>
+                     <Link to="/cart"><button className='primary-btn'>Buy Course</button></Link>
                   </div>
 
                   <div className="course_img my-5">

@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2';
 import useAuth from '../../hooks/useAuth';
 import { Rating } from 'react-simple-star-rating';
+import Navigation from '../shared/Navigation';
+import Footer from '../../pages/Home/Footer/Footer';
 
 const Review = () => {
     const { user } = useAuth();
@@ -61,9 +63,10 @@ const Review = () => {
 
    return (
       <>
+      <Navigation></Navigation>
          <div>
             <h3 className="text-center my-5 text-danger" data-aos="fade-up">Review Your Order</h3>
-            <div className="review_form">
+            <div className="review_form my-5">
                <div className="form_container" data-aos="fade-up">
                   <form onSubmit={handleSubmit(onSubmit)}>
                      <input defaultValue={user?.displayName} {...register("name")} placeholder="Product Name" />
@@ -78,6 +81,8 @@ const Review = () => {
                </div>
             </div>
          </div>
+
+         <Footer></Footer>
       </>
    );
 };
