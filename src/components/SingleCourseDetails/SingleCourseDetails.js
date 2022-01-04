@@ -5,7 +5,7 @@ import { GetContext } from "../../context/ContextProvider";
 
 const SingleCourseDetails = () => {
    const {name} = useParams();
-   const {singleCourse,setSingleCourse} = useContext(GetContext);
+   const {singleCourse, setSingleCourse} = useContext(GetContext);
    useEffect(() => {
       const url = `https://limitless-shelf-68611.herokuapp.com/courses/${name}`;
       fetch(url)
