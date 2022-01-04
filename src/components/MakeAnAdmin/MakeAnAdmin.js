@@ -20,6 +20,11 @@ const MakeAnAdmin = () => {
             },
             body: JSON.stringify(adminEmailData)
         })
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data)
+
+            })
 
     }
     return (
