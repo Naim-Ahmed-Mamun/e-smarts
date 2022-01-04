@@ -1,0 +1,17 @@
+.form-control {
+    border-bottom: 1px solid gray!important;
+}
+textarea{
+    border: none!important;
+    border-radius: 0px!important;
+}
+input {
+    border: none!important;
+    border-radius: 0px!important;
+}
+
+#instructors{
+    background-image: url(./../../img/backgoround-3.webp);
+    background-size: cover;
+}
+
