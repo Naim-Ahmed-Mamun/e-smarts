@@ -1,0 +1,33 @@
+.order-title{
+    margin-bottom: 20px;
+    padding: 20px 0px;
+    border-radius: 2px;
+}
+.order-title h1{
+    color: #000000;
+    font-size: 20px;
+    
+}
+.userOrders{
+    padding: 40px 0px;
+
+}
+.userOrder{
+    padding: 40px 0px;
+    border: 0;
+    border-radius: 5px;
+    background: #FFFFFF;
+    margin-bottom: 40px;
+
+}
+.userOrder button{
+    padding: 5px 10px;
+    border:0;
+    border-radius: 5px;
+}
+.userOrder .fa-user{
+    color: #22E2D9;
+}
+.userOrder .fa-trash{
+    color: red;
+}

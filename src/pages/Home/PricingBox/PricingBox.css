@@ -1,0 +1,104 @@
+/* Start pricing style   */
+.pricing-container{
+    background-color:rgba(245, 245, 245, 0.795);
+    padding: 50px 0px;
+}
+.pricing-container .pricing-titles{
+    text-align: center;
+    padding: 80px 0px;
+}
+.pricing-titles h4{
+    color: #04D2C8;
+    font-weight: bold;
+}
+.pricing-titles h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.pricing-titles p{
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.568);
+}
+.pricing-boxes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px; 
+    margin: 40px 0px;
+}
+.pricing-boxes .pricing-box{
+    background-color: #FFFFFF;
+    padding: 40px 0px;
+    border: 0;
+    border-radius: 5px;
+    color: grey;
+    font-size: 20px;
+    transition: all 0.1s ease-in-out;
+}
+
+.pricing-boxes :hover{
+    /* transform: translateY(-20px); */
+    box-shadow: 2px 4px 3px 2px rgba(255, 255, 255, 0.911);
+}
+.pricing-box .pricingBox-partOne p{
+    color: rgba(0, 0, 0, 0.116);
+}
+.pricingBox-partOne .starts i{
+    color: yellow;
+    font-size: 20px;
+}
+.pricing-box .pricingBox-partOne h2{
+    font-size: 30px;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.568);
+}
+.pricing-box .pricingBox-partOne h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.pricing-boxes .pricingBox-partOne{
+    text-align: center;
+}
+.pricing-boxes .pricingBox-partTwo{
+    text-align: center;
+    padding: 10px;
+}
+
+.pricing-boxes .purchaseBtn{
+    padding: 15px 50px;
+    border: 0;
+    border-radius: 25px;
+    margin-top: 40px;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+#purchaseBtnOne{
+    background: #FF9900;
+}
+#purchaseBtnTwo{
+    background: #22E2D9;
+}
+#purchaseBtnThree{
+    background: #534E8B;
+}
+#commonColorOne{
+    color: #FF9900;
+}
+#commonColorTwo{
+    color: #22E2D9;
+}
+#commonColorThree{
+    color: #534E8B;
+}
+
+/* End pricing style */
+
+@media (max-width: 690px) {
+    .pricing-boxes{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px; 
+        margin: 40px 0px;
+    }
+    
+}
