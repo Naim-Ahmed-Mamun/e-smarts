@@ -46,17 +46,17 @@ const Navigation = () => {
 
          <Container>
             <Navbar bg="light" expand="lg">
-               <div className="d-lg-none d-sm-block"><span onClick={handleShow}><BiMenu className="menuBar" /></span>
-               </div>
+
                <img style={{ width: '300px', height: '97px' }} src={logo} alt="" />
                <Container>
-                  <Nav className="d-none d-lg-block ms-auto">
+                  <Nav className="d-none d-md-block ms-auto">
                      <NavLink className="nav_link" to="/">Home</NavLink>
                      <NavLink className="nav_link" to="/allCourses">Courses</NavLink>
                      <NavLink className="nav_link" to="/">Instructors</NavLink>
                      <NavLink className="nav_link" to="/blogs">Blogs</NavLink>
-                     <NavLink className="nav_link" to="/">Contact</NavLink>
+                     <NavLink className="nav_link" to="/contact">Contact</NavLink>
                   </Nav>
+                  <div className="ms-3"><span onClick={handleShow}><BiMenu className="menuBar" /></span> </div>
                </Container>
             </Navbar>
          </Container>

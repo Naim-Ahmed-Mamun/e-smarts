@@ -1,0 +1,47 @@
+.MakeAdminContainer{
+    background: rgba(245, 245, 245, 0.795);
+}
+.MakeAdminTitle{
+    background-image: url("https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/title-area-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 240px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    color:#FFFFFF;
+    margin-bottom: 40px;
+}
+.MakeAdminTitle a{
+    color: #FFFFFF;
+}
+.MakeAdminTitle h1{
+    font-size: 50px;
+    font-weight: bold;
+}
+.MakeAdminForm{
+   display: flex;
+   justify-content: center;
+   padding: 40px 0px;
+}
+.MakeAdminForm i{
+    font-size: 30px;
+    color: #22E2D9;
+}
+.MakeAdminForm span{
+    font-size: 25px;
+    font-weight: bold;
+    color: #22E2D9;
+}
+.MakeAdminForm input{
+    width: 100%;
+}
+.adminBtn{
+    width: 100%;
+    padding: 5px 10px;
+    border: 0;
+    background: #22E2D9;
+    color: #FFFFFF;
+    font-weight: bold;
+    border-radius: 5px;
+}

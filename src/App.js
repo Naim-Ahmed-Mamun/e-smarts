@@ -1,8 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 import Blogs from './pages/Blogs/Blogs';
 import Login from './components/shared/Login/Login/Login';
 import Register from './components/shared/Register/Register';
@@ -10,12 +7,18 @@ import SingleCourseDetails from './components/SingleCourseDetails/SingleCourseDe
 import ContextProvider from './context/ContextProvider';
 import AllCourses from './pages/AllCourses/AllCourses/AllCourses';
 import Home from './pages/Home/Home/Home';
-import Review from './components/Review/Review';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import Navigation from './components/shared/Navigation';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
+import ManageAllOrder from './components/ManageAllOrder/ManageAllOrder';
+import MakeAnAdmin from './components/MakeAnAdmin/MakeAnAdmin';
+import Review from './components/Review/Review';
+import MyCart from './components/MyCart/MyCart';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
-import Navigation from './components/shared/Navigation';
-import MyCart from './components/MyCart/MyCart';
+import Contact from './pages/Contact/Contact';
 
 function App() {
   useEffect(() => {
@@ -40,12 +43,15 @@ function App() {
             <Route path="/login" element={<Login></Login>}></Route>
             <Route path="/register" element={<Register></Register>}></Route>
             <Route path="/review" element={<Review></Review>}></Route>
-            <Route path="/cart" element={<Cart></Cart>}></Route>
+            <Route path="/myOrders" element={<MyCart></MyCart>}></Route>
             <Route path="/checkout" element={<Checkout></Checkout>}></Route>
-            <Route path="/myOrder" element={<MyCart></MyCart>}></Route>
-          </Routes>
+            <Route path="/contact" element={<Contact></Contact>}></Route>
+            <Route path="/cart" element={<Cart></Cart>}></Route>
+            <Route path="/manageAllOrders" element={<ManageAllOrder></ManageAllOrder>}></Route>
+            <Route path="/makeAdmin" element={<MakeAnAdmin></MakeAnAdmin>}></Route>
+        </Routes>
         </BrowserRouter>
-
+     
       </ContextProvider>
 
     </>

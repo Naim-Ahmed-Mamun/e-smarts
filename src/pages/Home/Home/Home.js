@@ -7,6 +7,8 @@ import Services from '../Services/Services';
 import OurDifference from '../OurDifference/OurDifference';
 import Footer from '../Footer/Footer';
 import Courses from '../Courses/Courses';
+// import MakeAnAdmin from '../../../components/MakeAnAdmin/MakeAnAdmin';
+// import ManageAllOrder from '../../../components/ManageAllOrder/ManageAllOrder';
 import Testimonials from '../Testimonials/Testimonials';
 
 const Home = () => {
@@ -19,6 +21,8 @@ const Home = () => {
          <HowWorks />
          <Testimonials />
          <PricingBox></PricingBox>
+         {/* <MakeAnAdmin></MakeAnAdmin> */}
+         {/* <ManageAllOrder></ManageAllOrder> */}
          <AllLogo></AllLogo>
          <Footer></Footer>
       </>

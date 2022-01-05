@@ -33,7 +33,7 @@ const Checkout = () => {
                   title: 'Order Place Successfully',
                })
                reset();
-               navigate('/myOrder')
+               navigate('/myOrders')
             }
          })
       //  console.log(data);

@@ -3,7 +3,6 @@ import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2';
 import useAuth from '../../hooks/useAuth';
 import { Rating } from 'react-simple-star-rating';
-import Navigation from '../shared/Navigation';
 import Footer from '../../pages/Home/Footer/Footer';
 
 const Review = () => {

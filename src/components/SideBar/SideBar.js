@@ -15,7 +15,7 @@ const SideBar = ({ show, handleClose }) => {
                <img style={{ width: '200px', height: '80px' }} src={logo} alt="" />
             </Offcanvas.Header>
             <Offcanvas.Body>
-               <Navbar expand="lg">
+               <Navbar expand="lg" className='d-md-none'>
                   <Nav>
                      <NavLink className="nav_link" to="/">Home</NavLink>
                      <NavLink className="nav_link" to="/allCourses">Courses</NavLink>
@@ -24,7 +24,7 @@ const SideBar = ({ show, handleClose }) => {
                      <NavLink className="nav_link" to="/">Contact</NavLink>
                   </Nav>
                </Navbar>
-               <div className="d-lg-none">
+               <div className="d-md-none">
                   {
                      user?.email ? <button onClick={logout} className="primary-btn mx-3">Logout</button>
                         : <Link to="/login"><button className="primary-btn mx-3">Login</button></Link>
@@ -32,7 +32,12 @@ const SideBar = ({ show, handleClose }) => {
                   {/* <Link to="/login"><button className="primary-btn mx-3">Login</button></Link> */}
                   {!user?.email && <Link to="/register"><button className="primary-btn">Register</button></Link>}
                </div>
-               <Link to="/review">Review</Link>
+               <ul>
+                  <li><Link to="/review">Review</Link></li>
+                  <li><Link to="/myOrders">My Cart</Link></li>
+                  <li><Link to="/manageAllOrders">Manage All Orders</Link></li>
+                  <li><Link to="/makeAdmin">Make Admin</Link></li>
+               </ul>
             </Offcanvas.Body>
          </Offcanvas>
       </>

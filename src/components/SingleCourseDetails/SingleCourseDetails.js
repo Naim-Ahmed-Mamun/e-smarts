@@ -7,8 +7,8 @@ import { Container } from 'react-bootstrap';
 import Footer from '../../pages/Home/Footer/Footer';
 
 const SingleCourseDetails = () => {
-   const { id } = useParams();
-   const { singleCourse, setSingleCourse } = useContext(GetContext);
+   const {id} = useParams();
+   const {singleCourse, setSingleCourse} = useContext(GetContext);
    useEffect(() => {
       const url = `https://limitless-shelf-68611.herokuapp.com/courses/${id}`;
       fetch(url)
