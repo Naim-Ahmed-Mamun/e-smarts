@@ -17,22 +17,34 @@ const ManageAllOrder = () => {
     }, [])
 
     const handleDelete = id => {
-        console.log(id)
-        const url = `https://limitless-shelf-68611.herokuapp.com/orders/${id}`
-        fetch(url, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data)
+        // console.log(id)
+        const confirmMessage = window.confirm("You Would like to delete this Order?")
+
+        if(confirmMessage){
+            const url = `https://limitless-shelf-68611.herokuapp.com/orders/${id}`
+            fetch(url, {
+                method: 'DELETE'
             })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    if(data.deletedCount){
+                        const withOutClickedOrder = userOrder.filter(order => order._id !== id)
+                        setUserOrder(withOutClickedOrder)
+                        alert("Your Order deleted successfully!")
+                    }
+                })
+        }else{
+            alert("Your Order is Safe.")
+        }
+        
     }
     return (
         <div className='MakeAdminContainer'>
             <div className='MakeAdminTitle'>
                 <Container>
-                    <h1>Make All Order</h1>
-                    <Link to="/home"><p>Home/Make All Order</p></Link>
+                    <h1>Manage All Order</h1>
+                    <Link to="/home"><p>Home/Manage All Order</p></Link>
                 </Container>
             </div>
             <Container>
@@ -43,7 +55,7 @@ const ManageAllOrder = () => {
                             <div className='col-lg-2 col-md-4 col-sm-6'><h1>Email</h1></div>
                             <div className='col-lg-2 col-md-4 col-sm-6'><h1>Type</h1></div>
                             <div className='col-lg-2 col-md-4 col-sm-6'><h1>Price</h1></div>
-                            <div className='col-lg-2 col-md-4 col-sm-6'><h1>Pay</h1></div>
+                            <div className='col-lg-2 col-md-4 col-sm-6'><h1>Payment</h1></div>
                             <div className='col-lg-2 col-md-4 col-sm-6'><h1>Delete</h1></div>
                         </div>
                     </div>
