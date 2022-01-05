@@ -7,6 +7,7 @@ import ins_1 from './../../img/instructor-img-2.jpg'
 import ins_2 from './../../img/instructor-img-3.jpg'
 import ins_3 from './../../img/instructor-img-4.jpg'
 import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import Footer from '../Home/Footer/Footer';
 
 const Instructor = () => {
     const instructorData = [
@@ -96,6 +97,8 @@ const Instructor = () => {
                 </section>
 
             </div>
+
+            <Footer></Footer>
         </>
     );
 };
