@@ -35,7 +35,9 @@ const Cart = () => {
                            <h5>${singleCourse?.price}</h5>
                         </div>
                      </div>
-                     <Link to="/checkout"><button className='primary-btn proceed_btn'>Proceed to checkout</button></Link>
+                     <Link to="/checkout" className='proceed_link'>
+                        <button className='primary-btn proceed_btn'>Proceed to checkout</button>
+                     </Link>
                   </div>
                </div>
             </div>

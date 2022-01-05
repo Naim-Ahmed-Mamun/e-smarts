@@ -17,3 +17,18 @@
     bottom: 40px;
     right: 40px;
 }
+
+/* media query */
+@media (max-width:768px){
+    .proceed_link{
+        text-align: center;
+        display: block;
+    }
+    .proceed_btn{
+        position: static;
+        text-align: center;
+        margin: 15px auto;
+        display: inline-block;
+    }
+    
+}

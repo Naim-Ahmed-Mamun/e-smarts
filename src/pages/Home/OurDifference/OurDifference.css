@@ -39,3 +39,16 @@
     font-size: 20px;
     font-weight: 600;
 }
+
+/* media query */
+@media (max-width:768px){
+    .tabs_wrapper{
+        flex-direction: column-reverse;
+    }
+    .tab-content{
+        padding-left: 0px;
+    }
+    .nav-tabs{
+        padding-top: 50px;
+    }
+}

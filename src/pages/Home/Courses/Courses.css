@@ -27,8 +27,11 @@
     font-weight: 400;
     padding: 0px 0 20px;
 }
-.course_box .rating{
+.course_box .rating_icon{
     color: orange;
+}
+.course_box .rating{
+    color: var(--text-gray);
 }
 .course_box .price{
     background: #FF9900;
@@ -43,3 +46,9 @@
     top: 0;
     right: 0;
 }
+.student{
+    color: var(--text-gray);
+}
+/* .user_icon{
+    color: var(--text-gray);
+} */

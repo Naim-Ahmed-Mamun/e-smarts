@@ -44,8 +44,7 @@ const Services = () => {
             {servicesData.map((service) => (
               <div
                 key={service.id}
-                className="col-lg-4 col-md-6 col-sm-12 text-center"
-              >
+                className="col-lg-4 col-md-6 col-sm-12 text-center mb-3">
                 <div className="shadow p-3 rounded">
                   <img src={service.icon} alt="" />
                   <h3 className="my-3 ser_title">{service.title}</h3>

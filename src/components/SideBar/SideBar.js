@@ -7,7 +7,7 @@ import logo from '../../img/logo.webp';
 import { NavLink } from 'react-router-dom';
 
 const SideBar = ({ show, handleClose }) => {
-   const { user, logout } = useAuth();
+   const { user, logout, admin } = useAuth();
    return (
       <>
          <Offcanvas show={show} onHide={handleClose}>
@@ -24,6 +24,14 @@ const SideBar = ({ show, handleClose }) => {
                      <NavLink className="nav_link" to="/">Contact</NavLink>
                   </Nav>
                </Navbar>
+
+               <ul className='p-0'>
+                  <li className="nav_link"><Link to="/review">Review</Link></li>
+                  <li className="nav_link"><Link to="/myOrders">My Cart</Link></li>
+                  {admin && <li className="nav_link"><Link to="/manageAllOrders">Manage All Orders</Link></li>}
+                  {admin && <li className="nav_link"><Link to="/makeAdmin">Make Admin</Link></li>}
+               </ul>
+
                <div className="d-md-none">
                   {
                      user?.email ? <button onClick={logout} className="primary-btn mx-3">Logout</button>
@@ -32,12 +40,6 @@ const SideBar = ({ show, handleClose }) => {
                   {/* <Link to="/login"><button className="primary-btn mx-3">Login</button></Link> */}
                   {!user?.email && <Link to="/register"><button className="primary-btn">Register</button></Link>}
                </div>
-               <ul>
-                  <li><Link to="/review">Review</Link></li>
-                  <li><Link to="/myOrders">My Cart</Link></li>
-                  <li><Link to="/manageAllOrders">Manage All Orders</Link></li>
-                  <li><Link to="/makeAdmin">Make Admin</Link></li>
-               </ul>
             </Offcanvas.Body>
          </Offcanvas>
       </>

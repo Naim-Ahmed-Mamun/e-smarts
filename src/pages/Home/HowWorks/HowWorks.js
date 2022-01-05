@@ -44,7 +44,7 @@ const HowWorks = () => {
                </div>
                <div className="row works_items_wrapper mt-5" data-aos="fade-up">
                  {
-                    worksData.map(work => <div key={work.id} className="col-lg-3 col-md-4 col-sm-6 col-12">
+                    worksData.map(work => <div key={work.id} className="col-lg-3 col-md-4 col-sm-6 col-12 mb-3">
                         <div className="work_box text-center">
                            <div className="img mb-3">
                               <img src={work.img} alt="" />

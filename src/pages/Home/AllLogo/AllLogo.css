@@ -1,3 +1,11 @@
 .logoContainer{
     padding: 80px 0px;
 }
+
+/* media query */
+@media (max-width:768px){
+    .company_logo{
+        text-align: center;
+        margin-bottom: 15px;
+    }
+}

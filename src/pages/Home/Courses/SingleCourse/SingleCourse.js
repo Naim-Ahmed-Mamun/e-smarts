@@ -12,10 +12,11 @@ const SingleCourse = ({ course }) => {
                <Card.Body>
                   <Card.Title className='text-capitalize title mb-2'>{course?.name}</Card.Title>
                   <Card.Text className='trainer'> {course?.trainer}</Card.Text>
-                  <Card.Text className='description border-bottom'> {course?.description.slice(0, 70)} <span style={{ color: 'red' }}>...continue</span></Card.Text>
+                  <Card.Text className='description border-bottom'> {course?.description.slice(0, 70)} 
+                  <span style={{ color: '#04D2C8' }}>...continue</span></Card.Text>
                   <ul className='p-0 d-flex align-items-center course_bottom_item'>
-                     <li className='me-2 student'><AiOutlineUser className='me-2' />{course?.student} Students</li>
-                     <li><AiFillStar className='me-2 rating' />{course?.rating} Ratings</li>
+                     <li className='me-2 student'><AiOutlineUser className='me-2 user_icon' />{course?.student} Students</li>
+                     <li className='rating'><AiFillStar className='me-2 rating_icon' />{course?.rating} Ratings</li>
                      <li className='price rounded text-white'>${course?.price}</li>
                   </ul>
                </Card.Body>

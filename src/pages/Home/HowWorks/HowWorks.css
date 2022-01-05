@@ -18,3 +18,11 @@
     font-weight: 400;
     color: var(--gray-color);
 }
+
+/* media query */
+@media (max-width:768px){
+    .works_items_wrapper{
+        background: transparent;
+        background-repeat: no-repeat;
+    }
+}

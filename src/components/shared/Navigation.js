@@ -15,6 +15,18 @@ const Navigation = () => {
    // console.log(user.email);
    const [show, setShow] = useState(false);
 
+   // sticky state
+   const [sticky, setSticky] = useState(false);
+   const stickyNavbar = () => {
+      if (window.scrollY > 50) {
+         setSticky(true)
+      }
+      else {
+         setSticky(false)
+      }
+   }
+   window.addEventListener('scroll', stickyNavbar);
+
    const handleClose = () => setShow(false);
    const handleShow = () => setShow(true);
    return (
@@ -45,20 +57,24 @@ const Navigation = () => {
          </div>
 
          <Container>
-            <Navbar bg="light" expand="lg">
+            <div className={sticky ? 'sticky' : ''}>
+               <Navbar bg="light" expand="lg" className='navbar navbar-expand-lg navbar-light bg-light'>
 
-               <img style={{ width: '300px', height: '97px' }} src={logo} alt="" />
-               <Container>
-                  <Nav className="d-none d-md-block ms-auto">
-                     <NavLink className="nav_link" to="/">Home</NavLink>
-                     <NavLink className="nav_link" to="/allCourses">Courses</NavLink>
-                     <NavLink className="nav_link" to="/instructor">Instructors</NavLink>
-                     <NavLink className="nav_link" to="/blogs">Blogs</NavLink>
-                     <NavLink className="nav_link" to="/contact">Contact</NavLink>
-                  </Nav>
-                  <div className="ms-3"><span onClick={handleShow}><BiMenu className="menuBar" /></span> </div>
-               </Container>
-            </Navbar>
+                  <Container>
+                  <div className='logo'>
+                     <Link to="/"><img style={{ width: '300px', height: '97px' }} src={logo} alt="" /></Link>
+                  </div>
+                     <Nav className="d-none d-md-block ms-auto">
+                        <NavLink className="nav_link" to="/">Home</NavLink>
+                        <NavLink className="nav_link" to="/allCourses">Courses</NavLink>
+                        <NavLink className="nav_link" to="/instructor">Instructors</NavLink>
+                        <NavLink className="nav_link" to="/blogs">Blogs</NavLink>
+                        <NavLink className="nav_link" to="/contact">Contact</NavLink>
+                     </Nav>
+                     {user?.email && <div className="ms-3 d-inline-block"><span onClick={handleShow}><BiMenu className="menuBar" /></span> </div>}
+                  </Container>
+               </Navbar>
+            </div>
          </Container>
 
          <SideBar show={show} handleClose={handleClose}></SideBar>

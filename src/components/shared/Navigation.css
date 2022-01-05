@@ -1,23 +1,49 @@
-.top_text{
+.top_text {
     font-size: 16px;
     font-weight: 600;
     color: var(--text-gray);
 }
-.icon{
+
+.sticky {
+    position: fixed !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    border-bottom: 1px solid rgba(225, 225, 225, 0.5);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.icon {
     color: var(--text-gray);
     font-size: 16px;
     display: inline-block;
 }
-.nav_link{
+
+.nav_link {
     font-size: 18px;
     font-weight: 500;
-    color: var(--text-gray);
+    color: var(--text-gray) !important;
     margin: 0 15px;
 }
-.nav_link:last-child{
+
+.nav_link:last-child {
     margin-right: 0px;
 }
-.menuBar{
+
+.menuBar {
     cursor: pointer;
     font-size: 24px;
+}
+
+@media (max-width:768px) {
+    .logo {
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .logo img {
+        width: 220px;
+        height: 75px;
+    }
 }
