@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 import useCourses from '../../../hooks/useCourses';
 import './Courses.css';
 import "slick-carousel/slick/slick.css";
@@ -8,7 +8,7 @@ import Slider from 'react-slick';
 import SingleCourse from './SingleCourse/SingleCourse';
 
 const Courses = () => {
-   const { courses } = useCourses();
+   const { courses, loading } = useCourses();
    const fewCourses = courses.slice(0, 5);
 
    const settings = {
@@ -57,6 +57,12 @@ const Courses = () => {
                      dictum condim.
                   </p>
                </div>
+
+               {
+                  loading && <div className='text-center'>
+                     <Spinner className='animate_loader' animation="grow" variant='info' />
+                  </div>
+               }
 
                <Slider {...settings}>
                   {fewCourses.map(course => <SingleCourse key={course?._id} course={course}></SingleCourse>)}

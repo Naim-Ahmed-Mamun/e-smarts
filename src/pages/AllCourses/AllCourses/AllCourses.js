@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Container } from 'react-bootstrap';
+import { Card, Container, Spinner } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useCourses from '../../../hooks/useCourses';
 import './AllCourses.css';
@@ -7,7 +7,14 @@ import { AiOutlineUser, AiFillStar } from 'react-icons/ai';
 import Footer from '../../Home/Footer/Footer';
 
 const AllCourses = () => {
-   const { courses } = useCourses();
+   const { courses, loading } = useCourses();
+   if (loading) {
+      return (
+         <div className='my-5 text-center'>
+            <Spinner animation="grow" />
+         </div>
+      )
+   }
    return (
       <>
          <div className="all_courses">
@@ -36,7 +43,7 @@ const AllCourses = () => {
                               </ul>
                            </Card.Body>
                         </Card>
-                        </Link>
+                     </Link>
                   </div>)}
                </div>
             </Container>
