@@ -19,6 +19,8 @@ import MyCart from './components/MyCart/MyCart';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
 import Contact from './pages/Contact/Contact';
+import Instructor from './pages/Instructor/Instructor';
+
 
 function App() {
   useEffect(() => {
@@ -49,6 +51,7 @@ function App() {
             <Route path="/cart" element={<Cart></Cart>}></Route>
             <Route path="/manageAllOrders" element={<ManageAllOrder></ManageAllOrder>}></Route>
             <Route path="/makeAdmin" element={<MakeAnAdmin></MakeAnAdmin>}></Route>
+            <Route path="/instructor" element={<Instructor></Instructor>}></Route>
         </Routes>
         </BrowserRouter>
      

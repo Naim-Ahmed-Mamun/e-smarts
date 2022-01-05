@@ -52,7 +52,7 @@ const Navigation = () => {
                   <Nav className="d-none d-md-block ms-auto">
                      <NavLink className="nav_link" to="/">Home</NavLink>
                      <NavLink className="nav_link" to="/allCourses">Courses</NavLink>
-                     <NavLink className="nav_link" to="/">Instructors</NavLink>
+                     <NavLink className="nav_link" to="/instructor">Instructors</NavLink>
                      <NavLink className="nav_link" to="/blogs">Blogs</NavLink>
                      <NavLink className="nav_link" to="/contact">Contact</NavLink>
                   </Nav>
