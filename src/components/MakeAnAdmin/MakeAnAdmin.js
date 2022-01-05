@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import './MakeAnAdmin.css';
 
 const MakeAnAdmin = () => {
@@ -22,7 +23,18 @@ const MakeAnAdmin = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+                // console.log(data)
+                if(data.modifiedCount){
+                    Swal.fire({
+                        type: 'success',
+                        title: 'Admin ad successfully!',
+                     })
+                }else{
+                    Swal.fire({
+                        type: 'error',
+                        title: 'User Not Find!',
+                     })
+                }
 
             })
 
